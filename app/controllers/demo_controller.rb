@@ -1,20 +1,15 @@
 class DemoController < ApplicationController
-  
+
   layout false
+
   demo_index_url = 3
 
   def index
   end
 
-  def demo_index_url
-  end
-
   def hello
-  	#render('index')
-  end
-
-  def other_hello
-  	redirect_to(:controller => 'demo', :action => 'index')
+  	# render('index')
+    @array = [1,2,3,4,5]
   end
 
   def lynda

@@ -1,2 +1,22 @@
 <h1>Demo#hello</h1>
-<p>Find me in app/views/demo/index.html.erb</p>
+<h2>This is non-default view template in demo controller. </h2>
+<p>Find me in app/views/demo/hello.html.erb</p>
+
+<br />
+<%= link_to('Link na index', {:controller => 'demo', :action => 'index'}) %>
+<br />
+<% target = 'moja varijabla ' %>
+<%= "Isprintaj: #{target}, #{params[:id]} blasra"  %>
+
+<% @array.each do |n| %>
+  <%= n %>
+<% end %>
+
+<br />
+<%= params['id']%><br />
+<%= params[:id]%><br />
+<%= params[:page]%><br />
+<%= %><br />
+
+<hr />
+<%= params.inspect %>
