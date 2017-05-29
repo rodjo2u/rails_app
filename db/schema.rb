@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529000707) do
+ActiveRecord::Schema.define(version: 20170529142320) do
 
   create_table "unofficial_overwolf", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "username",              limit: 45
@@ -45,10 +45,12 @@ ActiveRecord::Schema.define(version: 20170529000707) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name", limit: 25
     t.string   "last_name",  limit: 50
+    t.string   "username"
     t.string   "email",                 default: "", null: false
     t.string   "password",   limit: 50
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.index ["username"], name: "index_users_on_username", using: :btree
   end
 
 end
