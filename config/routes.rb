@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'demo/hello', to: 'demo#hello'
   get 'demo/lynda', to: 'demo#lynda'
 
+  get 'users', to: 'users#index'
   # fallback
   # match ':controller(/:action(/:id))', :via => :get
 
