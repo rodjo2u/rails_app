@@ -1,5 +1,5 @@
 class User < ApplicationRecord
 
-  scope :search, lambda{|query| where(["first_name LIKE ?", "%#{query}%"])}
+  scope :search_by_name, lambda{|query| where(["first_name LIKE ?", "%#{query}%"])}
 
 end
