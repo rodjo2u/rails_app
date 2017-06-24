@@ -7,7 +7,12 @@
   <input type="submit" value="Submit">
 </form>
 
-<%= params %>
+<% params.each do |key, value| %>
+  <%= key %>
+  =>
+  <%= value %>
+  <br />
+<% end %>
 
 <br />
 <br />
